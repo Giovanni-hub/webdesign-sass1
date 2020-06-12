@@ -1,0 +1,224 @@
+// VARIABLE //
+
+$grey: hsl(215, 33%, 87%);
+$electricblue: #26c4fa;
+
+// MIX IN //
+
+@mixin title{
+    font-size: 30px ;
+    font-weight: normal;
+    margin: 5px 20px 5px 20px;
+}
+
+@mixin text {
+    font-size: 20px;
+    padding:  5px 15px;
+}
+
+@mixin alignLeft{
+    left: 10%;
+}
+
+@mixin titleBold{
+    font-weight: bold;
+    font-size: 30px;
+}
+
+body {
+    margin: 0px;
+    height: 100%;
+    width: 100%;
+}
+
+.proj-prev {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(img/header.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.proj-nav {
+    display: flex;
+    justify-content: space-around;
+    height: 50vh;
+    
+    .proj-nav__part {
+        width: 30%;
+        text-align: center;
+        background-color: $grey;
+
+            h6 {
+                @include title;
+            }
+
+            img{
+                margin-top: 10%;
+                height: 20vh;
+            }
+
+            p {
+                @include text;
+            }
+    }
+}
+
+.proj-res {
+    position: relative;
+    z-index: 0;
+    height: 25vh;
+    margin: 5% 0% 5% 0%;
+    background-color: $grey;
+    
+
+        .proj-res__title {
+            position: absolute;
+            @include alignLeft;
+            @include titleBold;
+            margin-top: 60px;
+        }
+
+        .proj-res__button {
+            position: absolute;
+            margin-top: 60px;
+            left: 50%;
+            height: 40%;
+            width: 20vw;
+            border: solid  5px $electricblue;;
+            background-color: $grey;
+            color: $electricblue;
+            text-transform: uppercase;
+        }
+
+        .proj-res__img {
+            position: absolute;
+            left: 66%;
+            height: 35vh;
+            z-index: 1;
+        }
+
+}
+
+.proj-learn {
+    position: relative;
+    display: flex;
+    margin-bottom: 10%;
+
+    .proj-learn__img {
+        position: relative;
+        @include alignLeft;
+        top: 10%;
+        width: 30%;
+    }
+    .proj-learn__box {
+        border: solid 1px black;
+        position: absolute;
+        font-size: 25px;
+        width: 30%;
+        left: 45%;
+        padding: 1% 10%;
+        margin-left: 4%;
+        
+        .proj-learn__boxTitle {
+            font-weight: bold;
+            text-align: center;
+            font-weight: 500;
+            span {
+                color: lightblue;
+            }
+        }
+        .proj-learn__text {
+            text-align: justify;
+            font-size: 25px;
+        }
+    }
+}
+
+
+.proj-contact {
+   display: flex;
+   height: 40vh;
+   margin-top: 5%;
+
+   
+  
+    .proj-contact__testifyImgContainer{
+        position: relative;
+        top: -40%;
+        @include alignLeft;
+        
+            .proj-contact__testifyTitle {
+                position: relative;
+                //@include alignLeft;
+                @include titleBold;
+                width: 300%;
+                margin-bottom: 1%;
+            }
+    }
+
+    .proj-contact__testifyImg {
+        height: 15vh;
+        position: relative;
+        margin-top: 10%;
+        //@include alignLeft;
+    }
+
+    .proj-contact__testifyText {
+        position: relative;
+        left: 15%;
+        width: 50%;
+        margin-top:5%;
+        
+    }
+
+    .proj-contact__form {
+        width: 50%;
+        background-color: $grey;
+
+            input {
+                width: 80%;
+                margin: 5%
+            }
+
+            label {
+                margin: 5%;
+                color: grey;
+            }
+
+            textarea {
+                width: 80%;
+                margin: 5%;
+            }
+     }
+
+}
+
+footer {
+    position: relative;
+    text-align: center;
+    
+    img {
+        max-width: 100%;
+    }
+    
+    div {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        bottom: 0em;
+        width: 100%;
+        height: 5vh;
+        background-color: #64779F;
+
+        p {
+            color: white;
+            padding-bottom: 15px;
+            margin-right: 5px;
+        }
+
+        #black {
+            color: black;
+        }
+    }
+}
